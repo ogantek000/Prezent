@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomysły na Prezent dla ANTOSIA GAB</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            transition: background 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .gifts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .gift-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .gift-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .gift-card img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .gift-icon {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .gift-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .gift-description {
+            color: #666;
+            line-height: 1.6;
+            text-align: center;
+            font-size: 0.95em;
+        }
+
+        .price-tag {
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .gifts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gift-card img {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎁 KSIĄŻKI 🎁</h1>
+        <a href="index.html" class="back-link">← POWRÓT DO STRONY GŁÓWNEJ</a>
+        
+        <div class="gifts-grid">
+            <div class="gift-card">
+                <img src="AH.jpg" alt="Octane album cover">	
+                <div class="gift-title">Atomic Habits</div>
+                <div class="gift-description">
+                    Autor: James clear
+				<div class="gift-description">
+                       W języku angielskim🇬🇧
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gifts-grid">
+            <div class="gift-card">
+                <img src="1984.jpg" alt="Octane album cover">	
+                <div class="gift-title">1984</div>
+                <div class="gift-description">
+                    Autor: George Orwell
+				<div class="gift-description">
+                       W języku angielskim🇬🇧
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gifts-grid">
+            <div class="gift-card">
+                <img src="A.webp" alt="Octane album cover">	
+                <div class="gift-title">The Alcemist</div>
+                <div class="gift-description">
+                    Autor: Paolo Coelho
+				<div class="gift-description">
+                       W języku angielskim🇬🇧
+                    </div>
+                </div>
+            </div>
+        </div>
+		        <div class="gifts-grid">
+            <div class="gift-card">
+                <img src="W.jpg" alt="Octane album cover">	
+                <div class="gift-title">Wiedźmin - miecz przeznaczenia</div>
+                <div class="gift-description">
+                    Autor: Andrzej Sapkowski
+				<div class="gift-description">
+                       W języku polskim🇵🇱
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

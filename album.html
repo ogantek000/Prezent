@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomysły na Prezent dla ANTOSIA GAB</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            transition: background 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .gifts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .gift-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .gift-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .gift-card img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .gift-icon {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .gift-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .gift-description {
+            color: #666;
+            line-height: 1.6;
+            text-align: center;
+            font-size: 0.95em;
+        }
+
+        .price-tag {
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .gifts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gift-card img {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎁 Pomysły na Prezent dla ANTOSIA 🎁</h1>
+        <a href="index.html" class="back-link">← POWRÓT DO STRONY GŁÓWNEJ</a>
+        
+        <div class="gifts-grid">
+            <div class="gift-card">
+                <img src="octane.jpeg" alt="Octane album cover">	
+                <div class="gift-title">OCTANE</div>
+                <div class="gift-description">
+                    Autor: Don Toliver
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <img src="BBM.jpg" alt="Black British Music album cover">	
+                <div class="gift-title">Black British Music</div>
+                <div class="gift-description">
+                    Autor: Jim Legxacy
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <img src="DBD.png" alt="Don't be dumb album cover">	
+                <div class="gift-title">Don't Be Dumb</div>
+                <div class="gift-description">
+                    Autor: A$AP Rocky
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <img src="MMESYF.png" alt="Melt my eyez album cover">	
+                <div class="gift-title">Melt My Eyez See Your Future</div>
+                <div class="gift-description">
+                    Autor: Denzel Curry
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <img src="Ye.jpg" alt="YE album cover">	
+                <div class="gift-title">YE</div>
+                <div class="gift-description">
+                    Autor: Kanye West
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <img src="grad.jpg" alt="Graduation album cover">	
+                <div class="gift-title">Graduation</div>
+                <div class="gift-description">
+                    Autor: Kanye West
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <img src="LR.jpg" alt="Late Registration album cover">	
+                <div class="gift-title">Late Registration</div>
+                <div class="gift-description">
+                    Autor: Kanye West
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <img src="KSG.png" alt="Kids See Ghosts album cover">	
+                <div class="gift-title">Kids See Ghosts</div>
+                <div class="gift-description">
+                    Autor: Kanye West, Kid Cudi
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <img src="MA.jpg" alt="Magic Alive album cover">	
+                <div class="gift-title">Magic, Alive</div>
+                <div class="gift-description">
+                    Autor: McKinley Dixon
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <img src="LLA.jpg" alt="Live Love ASAP album cover">	
+                <div class="gift-title">Live Love A$AP</div>
+                <div class="gift-description">
+                    Autor: A$AP Rocky
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <img src="JID.png" alt="The Forever Story album cover">	
+                <div class="gift-title">The Forever Story</div>
+                <div class="gift-description">
+                    Autor: JID
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <img src="Currents.png" alt="Currents album cover">	
+                <div class="gift-title">Currents</div>
+                <div class="gift-description">
+                    Autor: Tame Impala
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <img src="NOID.jpg" alt="Saba and No ID album cover">	
+                <div class="gift-title">From the Private Collection</div>
+                <div class="gift-description">
+                    Autor: Saba, No ID
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <img src="guitar.webp" alt="Guitar album cover">	
+                <div class="gift-title">Guitar</div>
+                <div class="gift-description">
+                    Autor: Mac DeMarco
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <img src="mac.png" alt="Balloonerism album cover">	
+                <div class="gift-title">Balloonerism</div>
+                <div class="gift-description">
+                    Autor: Mac Miller
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
