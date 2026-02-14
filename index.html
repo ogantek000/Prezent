@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomysły na Prezent</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .gifts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .gift-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gift-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .gift-icon {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .gift-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .gift-description {
+            color: #666;
+            line-height: 1.6;
+            text-align: center;
+            font-size: 0.95em;
+        }
+
+        .price-tag {
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .gifts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎁 Pomysły na Prezent 🎁</h1>
+        
+        <div class="gifts-grid">
+            <div class="gift-card">
+                <div class="gift-icon">📚</div>
+                <div class="gift-title">Książka</div>
+                <div class="gift-description">
+                    Inspirująca biografia, thriller lub bestseller w ulubionym gatunku
+                </div>
+                <center><span class="price-tag">40-80 zł</span></center>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-icon">🎧</div>
+                <div class="gift-title">Słuchawki</div>
+                <div class="gift-description">
+                    Bezprzewodowe słuchawki z dobrym dźwiękiem do muzyki i podcastów
+                </div>
+                <center><span class="price-tag">150-500 zł</span></center>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-icon">☕</div>
+                <div class="gift-title">Ekskluzywna Kawa</div>
+                <div class="gift-description">
+                    Zestaw specjalnych kaw z różnych zakątków świata
+                </div>
+                <center><span class="price-tag">60-150 zł</span></center>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-icon">🎮</div>
+                <div class="gift-title">Gra Komputerowa</div>
+                <div class="gift-description">
+                    Najnowsza gra lub voucher na Steam/PlayStation/Xbox
+                </div>
+                <center><span class="price-tag">100-250 zł</span></center>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-icon">👕</div>
+                <div class="gift-title">Ubranie</div>
+                <div class="gift-description">
+                    Stylowa bluza, koszula lub akcesoria od ulubionej marki
+                </div>
+                <center><span class="price-tag">100-400 zł</span></center>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-icon">🎬</div>
+                <div class="gift-title">Netflix / HBO</div>
+                <div class="gift-description">
+                    Subskrypcja na kilka miesięcy ulubionej platformy streamingowej
+                </div>
+                <center><span class="price-tag">60-200 zł</span></center>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-icon">🏋️</div>
+                <div class="gift-title">Karnet na Siłownię</div>
+                <div class="gift-description">
+                    Miesięczny lub kwartalny karnet do dobrego klubu fitness
+                </div>
+                <center><span class="price-tag">150-400 zł</span></center>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-icon">🍽️</div>
+                <div class="gift-title">Kolacja w Restauracji</div>
+                <div class="gift-description">
+                    Voucher do wybranej restauracji lub bon na dobre jedzenie
+                </div>
+                <center><span class="price-tag">100-300 zł</span></center>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-icon">⌚</div>
+                <div class="gift-title">Smartwatch</div>
+                <div class="gift-description">
+                    Zegarek sportowy z monitoringiem aktywności i zdrowia
+                </div>
+                <center><span class="price-tag">300-1500 zł</span></center>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-icon">🎨</div>
+                <div class="gift-title">Kurs Online</div>
+                <div class="git-description">
+                    Dostęp do kursu w interesującej dziedzinie (programowanie, grafika, języki)
+                </div>
+                <center><span class="price-tag">100-500 zł</span></center>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-icon">🎒</div>
+                <div class="gift-title">Plecak / Torba</div>
+                <div class="gift-description">
+                    Praktyczny plecak na laptopa lub elegancka torba
+                </div>
+                <center><span class="price-tag">150-600 zł</span></center>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-icon">🎁</div>
+                <div class="gift-title">Bon Podarunkowy</div>
+                <div class="gift-description">
+                    Uniwersalny bon do sklepu lub galerii handlowej
+                </div>
+                <center><span class="price-tag">Dowolna kwota</span></center>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
