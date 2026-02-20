@@ -88,12 +88,6 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
 
-        .gift-icon {
-            font-size: 3em;
-            text-align: center;
-            margin-bottom: 15px;
-        }
-
         .gift-title {
             font-size: 1.3em;
             font-weight: bold;
@@ -109,15 +103,45 @@
             font-size: 0.95em;
         }
 
-        .price-tag {
-            background: #667eea;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            display: inline-block;
+        .shop-buttons {
+            display: flex;
+            gap: 8px;
             margin-top: 15px;
-            font-size: 0.9em;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .shop-btn {
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 0.85em;
             font-weight: bold;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .shop-btn:hover {
+            opacity: 0.85;
+        }
+
+        .btn-empik {
+            background: #e3051b;
+            color: white;
+        }
+
+        .btn-amazon {
+            background: #FF9900;
+            color: #111;
+        }
+
+        .btn-official {
+            background: #222;
+            color: white;
+        }
+
+        .btn-discogs {
+            background: #333;
+            color: #ffcd3c;
         }
 
         @media (max-width: 600px) {
@@ -142,143 +166,179 @@
         <a href="index.html" class="back-link">← POWRÓT DO STRONY GŁÓWNEJ</a>
         
         <div class="gifts-grid">
+
             <div class="gift-card">
-                <img src="octane.jpeg" alt="Octane album cover">	
+                <img src="octane.jpeg" alt="Octane album cover">
                 <div class="gift-title">OCTANE</div>
-                <div class="gift-description">
-                    Autor: Don Toliver
+                <div class="gift-description">Autor: Don Toliver</div>
+                <div class="shop-buttons">
+                    <a class="shop-btn btn-empik" href="https://www.empik.com/szukaj/produkt?q=Don+Toliver+Octane+CD" target="_blank">🛒 Empik</a>
+                    <a class="shop-btn btn-official" href="https://dontoliver.com/products/octane-standard-cd" target="_blank">🏪 Oficjalny sklep</a>
+                    <a class="shop-btn btn-amazon" href="https://www.amazon.com/Toliver-Octane-Signed-Insert-Record/dp/B0GM8L1RFM" target="_blank">📦 Amazon</a>
                 </div>
             </div>
 
             <div class="gift-card">
-                <img src="BBM.jpg" alt="Black British Music album cover">	
+                <img src="BBM.jpg" alt="Black British Music album cover">
                 <div class="gift-title">Black British Music</div>
-                <div class="gift-description">
-                    Autor: Jim Legxacy
+                <div class="gift-description">Autor: Jim Legxacy</div>
+                <div class="shop-buttons">
+                    <a class="shop-btn btn-empik" href="https://www.empik.com/szukaj/produkt?q=Jim+Legxacy+Black+British+Music" target="_blank">🛒 Empik</a>
+                    <a class="shop-btn btn-discogs" href="https://www.discogs.com/search/?q=Jim+Legxacy+Black+British+Music&type=release" target="_blank">🎵 Discogs</a>
                 </div>
             </div>
 
             <div class="gift-card">
-                <img src="DBD.png" alt="Don't be dumb album cover">	
+                <img src="DBD.png" alt="Don't be dumb album cover">
                 <div class="gift-title">Don't Be Dumb</div>
-                <div class="gift-description">
-                    Autor: A$AP Rocky
+                <div class="gift-description">Autor: A$AP Rocky</div>
+                <div class="shop-buttons">
+                    <a class="shop-btn btn-empik" href="https://www.empik.com/szukaj/produkt?q=ASAP+Rocky+Don%27t+Be+Dumb+CD" target="_blank">🛒 Empik</a>
+                    <a class="shop-btn btn-amazon" href="https://www.amazon.com/s?k=ASAP+Rocky+Don%27t+Be+Dumb+CD" target="_blank">📦 Amazon</a>
                 </div>
             </div>
 
             <div class="gift-card">
-                <img src="MMESYF.png" alt="Melt my eyez album cover">	
+                <img src="MMESYF.png" alt="Melt my eyez album cover">
                 <div class="gift-title">Melt My Eyez See Your Future</div>
-                <div class="gift-description">
-                    Autor: Denzel Curry
+                <div class="gift-description">Autor: Denzel Curry</div>
+                <div class="shop-buttons">
+                    <a class="shop-btn btn-empik" href="https://www.empik.com/szukaj/produkt?q=Denzel+Curry+Melt+My+Eyez+CD" target="_blank">🛒 Empik</a>
+                    <a class="shop-btn btn-amazon" href="https://www.amazon.com/s?k=Denzel+Curry+Melt+My+Eyez+CD" target="_blank">📦 Amazon</a>
                 </div>
             </div>
 
             <div class="gift-card">
-                <img src="Ye.jpg" alt="YE album cover">	
+                <img src="Ye.jpg" alt="YE album cover">
                 <div class="gift-title">YE</div>
-                <div class="gift-description">
-                    Autor: Kanye West
+                <div class="gift-description">Autor: Kanye West</div>
+                <div class="shop-buttons">
+                    <a class="shop-btn btn-empik" href="https://www.empik.com/szukaj/produkt?q=Kanye+West+Ye+CD" target="_blank">🛒 Empik</a>
+                    <a class="shop-btn btn-amazon" href="https://www.amazon.com/s?k=Kanye+West+Ye+CD" target="_blank">📦 Amazon</a>
                 </div>
             </div>
-             <div class="gift-card">
-                <img src="clipse.jpg" alt="clipse album cover">	
-                <div class="gift-title">Let god sort em out</div>
-                <div class="gift-description">
-                    Autor: Clipse
+
+            <div class="gift-card">
+                <img src="clipse.jpg" alt="clipse album cover">
+                <div class="gift-title">Let God Sort Em Out</div>
+                <div class="gift-description">Autor: Clipse</div>
+                <div class="shop-buttons">
+                    <a class="shop-btn btn-empik" href="https://www.empik.com/szukaj/produkt?q=Clipse+Let+God+Sort+Em+Out+CD" target="_blank">🛒 Empik</a>
+                    <a class="shop-btn btn-amazon" href="https://www.amazon.com/s?k=Clipse+Let+God+Sort+Em+Out+CD" target="_blank">📦 Amazon</a>
                 </div>
             </div>
-             <div class="gift-card">
-                <img src="nas.jpg" alt="Nas album cover">	
+
+            <div class="gift-card">
+                <img src="nas.jpg" alt="Nas album cover">
                 <div class="gift-title">Illmatic</div>
-                <div class="gift-description">
-                    Autor: Nas
+                <div class="gift-description">Autor: Nas</div>
+                <div class="shop-buttons">
+                    <a class="shop-btn btn-empik" href="https://www.empik.com/illmatic-nas,162611,muzyka-p" target="_blank">🛒 Empik</a>
+                    <a class="shop-btn btn-amazon" href="https://www.amazon.com/Illmatic-Nas/dp/B0000029GA" target="_blank">📦 Amazon</a>
                 </div>
             </div>
 
             <div class="gift-card">
-                <img src="grad.jpg" alt="Graduation album cover">	
+                <img src="grad.jpg" alt="Graduation album cover">
                 <div class="gift-title">Graduation</div>
-                <div class="gift-description">
-                    Autor: Kanye West
+                <div class="gift-description">Autor: Kanye West</div>
+                <div class="shop-buttons">
+                    <a class="shop-btn btn-empik" href="https://www.empik.com/graduation-west-kanye,p1225977276,muzyka-p" target="_blank">🛒 Empik</a>
+                    <a class="shop-btn btn-amazon" href="https://www.amazon.com/Graduation-Kanye-West/dp/B000RG1FMO" target="_blank">📦 Amazon</a>
                 </div>
             </div>
 
             <div class="gift-card">
-                <img src="LR.jpg" alt="Late Registration album cover">	
+                <img src="LR.jpg" alt="Late Registration album cover">
                 <div class="gift-title">Late Registration</div>
-                <div class="gift-description">
-                    Autor: Kanye West
+                <div class="gift-description">Autor: Kanye West</div>
+                <div class="shop-buttons">
+                    <a class="shop-btn btn-empik" href="https://www.empik.com/szukaj/produkt?q=Kanye+West+Late+Registration+CD" target="_blank">🛒 Empik</a>
+                    <a class="shop-btn btn-amazon" href="https://www.amazon.com/s?k=Kanye+West+Late+Registration+CD" target="_blank">📦 Amazon</a>
                 </div>
             </div>
 
             <div class="gift-card">
-                <img src="KSG.png" alt="Kids See Ghosts album cover">	
+                <img src="KSG.png" alt="Kids See Ghosts album cover">
                 <div class="gift-title">Kids See Ghosts</div>
-                <div class="gift-description">
-                    Autor: Kanye West, Kid Cudi
+                <div class="gift-description">Autor: Kanye West, Kid Cudi</div>
+                <div class="shop-buttons">
+                    <a class="shop-btn btn-empik" href="https://www.empik.com/szukaj/produkt?q=Kids+See+Ghosts+CD" target="_blank">🛒 Empik</a>
+                    <a class="shop-btn btn-amazon" href="https://www.amazon.com/s?k=Kids+See+Ghosts+Kanye+Cudi+CD" target="_blank">📦 Amazon</a>
                 </div>
             </div>
 
             <div class="gift-card">
-                <img src="MA.jpg" alt="Magic Alive album cover">	
+                <img src="MA.jpg" alt="Magic Alive album cover">
                 <div class="gift-title">Magic, Alive</div>
-                <div class="gift-description">
-                    Autor: McKinley Dixon
+                <div class="gift-description">Autor: McKinley Dixon</div>
+                <div class="shop-buttons">
+                    <a class="shop-btn btn-empik" href="https://www.empik.com/szukaj/produkt?q=McKinley+Dixon+Magic+Alive" target="_blank">🛒 Empik</a>
+                    <a class="shop-btn btn-amazon" href="https://www.amazon.com/s?k=McKinley+Dixon+Magic+Alive+CD" target="_blank">📦 Amazon</a>
                 </div>
             </div>
 
             <div class="gift-card">
-                <img src="LLA.jpg" alt="Live Love ASAP album cover">	
+                <img src="LLA.jpg" alt="Live Love ASAP album cover">
                 <div class="gift-title">Live Love A$AP</div>
-                <div class="gift-description">
-                    Autor: A$AP Rocky
+                <div class="gift-description">Autor: A$AP Rocky</div>
+                <div class="shop-buttons">
+                    <a class="shop-btn btn-empik" href="https://www.empik.com/szukaj/produkt?q=ASAP+Rocky+Live+Love+CD" target="_blank">🛒 Empik</a>
+                    <a class="shop-btn btn-discogs" href="https://www.discogs.com/search/?q=ASAP+Rocky+Live+Love+ASAP&type=release" target="_blank">🎵 Discogs</a>
                 </div>
             </div>
 
             <div class="gift-card">
-                <img src="JID.png" alt="The Forever Story album cover">	
+                <img src="JID.png" alt="The Forever Story album cover">
                 <div class="gift-title">The Forever Story</div>
-                <div class="gift-description">
-                    Autor: JID
+                <div class="gift-description">Autor: JID</div>
+                <div class="shop-buttons">
+                    <a class="shop-btn btn-empik" href="https://www.empik.com/szukaj/produkt?q=JID+The+Forever+Story+CD" target="_blank">🛒 Empik</a>
+                    <a class="shop-btn btn-amazon" href="https://www.amazon.com/s?k=JID+The+Forever+Story+CD" target="_blank">📦 Amazon</a>
                 </div>
             </div>
 
             <div class="gift-card">
-                <img src="Currents.png" alt="Currents album cover">	
+                <img src="Currents.png" alt="Currents album cover">
                 <div class="gift-title">Currents</div>
-                <div class="gift-description">
-                    Autor: Tame Impala
+                <div class="gift-description">Autor: Tame Impala</div>
+                <div class="shop-buttons">
+                    <a class="shop-btn btn-empik" href="https://www.empik.com/szukaj/produkt?q=Tame+Impala+Currents+CD" target="_blank">🛒 Empik</a>
+                    <a class="shop-btn btn-amazon" href="https://www.amazon.com/s?k=Tame+Impala+Currents+CD" target="_blank">📦 Amazon</a>
                 </div>
             </div>
 
             <div class="gift-card">
-                <img src="NOID.jpg" alt="Saba and No ID album cover">	
+                <img src="NOID.jpg" alt="Saba and No ID album cover">
                 <div class="gift-title">From the Private Collection</div>
-                <div class="gift-description">
-                    Autor: Saba, No ID
+                <div class="gift-description">Autor: Saba, No ID</div>
+                <div class="shop-buttons">
+                    <a class="shop-btn btn-empik" href="https://www.empik.com/szukaj/produkt?q=Saba+No+ID+Private+Collection" target="_blank">🛒 Empik</a>
+                    <a class="shop-btn btn-amazon" href="https://www.amazon.com/s?k=Saba+No+ID+From+the+Private+Collection+CD" target="_blank">📦 Amazon</a>
                 </div>
             </div>
 
             <div class="gift-card">
-                <img src="guitar.webp" alt="Guitar album cover">	
+                <img src="guitar.webp" alt="Guitar album cover">
                 <div class="gift-title">Guitar</div>
-                <div class="gift-description">
-                    Autor: Mac DeMarco
+                <div class="gift-description">Autor: Mac DeMarco</div>
+                <div class="shop-buttons">
+                    <a class="shop-btn btn-empik" href="https://www.empik.com/szukaj/produkt?q=Mac+DeMarco+Guitar+CD" target="_blank">🛒 Empik</a>
+                    <a class="shop-btn btn-amazon" href="https://www.amazon.com/s?k=Mac+DeMarco+Guitar+CD" target="_blank">📦 Amazon</a>
                 </div>
             </div>
 
             <div class="gift-card">
-                <img src="mac.png" alt="Balloonerism album cover">	
+                <img src="mac.png" alt="Balloonerism album cover">
                 <div class="gift-title">Balloonerism</div>
-                <div class="gift-description">
-                    Autor: Mac Miller
+                <div class="gift-description">Autor: Mac Miller</div>
+                <div class="shop-buttons">
+                    <a class="shop-btn btn-empik" href="https://www.empik.com/szukaj/produkt?q=Mac+Miller+Balloonerism+CD" target="_blank">🛒 Empik</a>
+                    <a class="shop-btn btn-amazon" href="https://www.amazon.com/s?k=Mac+Miller+Balloonerism+CD" target="_blank">📦 Amazon</a>
                 </div>
             </div>
+
         </div>
     </div>
 </body>
-
 </html>
-
-
