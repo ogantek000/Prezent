@@ -1,0 +1,15 @@
+{
+  "name": "Giftist",
+  "short_name": "Giftist",
+  "description": "gift wishlist",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    },
+  
+  ]
+}
