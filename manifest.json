@@ -1,6 +1,6 @@
 {
-  "name": "Giftist",
-  "short_name": "Giftist",
+  "name": "Prezent",
+  "short_name": "Prezent",
   "description": "gift wishlist",
   "start_url": "index.html",
   "display": "standalone",
