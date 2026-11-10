@@ -1,290 +1,108 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prezent</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h1 {
-            color: white;
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .back-link {
-            display: block;
-            text-align: center;
-            color: white;
-            text-decoration: none;
-            font-size: 1.1em;
-            margin-bottom: 30px;
-            padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 25px;
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
-            transition: background 0.3s ease;
-        }
-
-        .back-link:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-
-        .gifts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 25px;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        .gift-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .gift-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-        }
-
-        .gift-card img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        }
-
-        .gift-title {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .gift-description {
-            color: #666;
-            line-height: 1.6;
-            text-align: center;
-            font-size: 0.95em;
-        }
-
-        .shop-buttons {
-            display: flex;
-            gap: 8px;
-            margin-top: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .shop-btn {
-            padding: 7px 14px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            font-weight: bold;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-
-        .shop-btn:hover {
-            opacity: 0.85;
-        }
-
-        .btn-empik {
-            background: #e3051b;
-            color: white;
-        }
-
-        .btn-amazon {
-            background: #FF9900;
-            color: #111;
-        }
-
-        .btn-official {
-            background: #222;
-            color: white;
-        }
-
-        .btn-discogs {
-            background: #333;
-            color: #ffcd3c;
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em;
-            }
-            
-            .gifts-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .gift-card img {
-                width: 180px;
-                height: 180px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Albumy – Prezent</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);background-attachment:fixed;min-height:100vh;padding:40px 20px}
+  .container{max-width:1200px;margin:0 auto}
+  h1{color:#fff;text-align:center;font-size:2.5em;text-shadow:2px 2px 4px rgba(0,0,0,.2)}
+  .podtytul{color:#ffffffd9;text-align:center;margin:8px 0 24px}
+  .back-link{display:block;width:fit-content;margin:20px auto 0;padding:10px 20px;color:#fff;text-decoration:none;background:rgba(255,255,255,.2);border-radius:25px;transition:background .3s}
+  .back-link:hover{background:rgba(255,255,255,.3)}
+  .gifts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+  .gift-card{position:relative;background:#fff;border-radius:15px;padding:25px;box-shadow:0 10px 30px rgba(0,0,0,.2);display:flex;flex-direction:column;align-items:center;transition:transform .3s,box-shadow .3s}
+  .gift-card:hover{transform:translateY(-5px);box-shadow:0 15px 40px rgba(0,0,0,.3)}
+  .gift-card img{width:200px;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px;box-shadow:0 4px 10px rgba(0,0,0,.15)}
+  .numer{position:absolute;top:12px;left:12px;background:#764ba2;color:#fff;font-weight:bold;font-size:.85em;min-width:28px;height:28px;border-radius:14px;display:flex;align-items:center;justify-content:center;padding:0 8px}
+  .gift-title{font-size:1.3em;font-weight:bold;color:#333;margin-bottom:8px;text-align:center}
+  .gift-description{color:#666;text-align:center;font-size:.95em}
+  .shop-buttons{display:flex;gap:8px;margin-top:15px;flex-wrap:wrap;justify-content:center}
+  .shop-btn{padding:7px 14px;border-radius:20px;font-size:.85em;font-weight:bold;text-decoration:none;transition:opacity .2s}
+  .shop-btn:hover{opacity:.85}
+  .btn-empik{background:#e3051b;color:#fff}
+  .btn-amazon{background:#FF9900;color:#111}
+  .btn-oficjalny{background:#222;color:#fff}
+  .btn-discogs{background:#333;color:#ffcd3c}
+  .kupione{opacity:.5}
+  .kupione .gift-title::after{content:" ✅"}
+  @media(max-width:600px){h1{font-size:2em}.gifts-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>🎁 ALBUMY 🎁</h1>
-        <a href="index.html" class="back-link">← POWRÓT DO STRONY GŁÓWNEJ</a>
-        <h1>+/- w kolejności od tych co najbardziej chciałbym</h1>
-        <div class="gifts-grid">
+<div class="container">
+  <h1>🎁 ALBUMY 🎁</h1>
+  <p class="podtytul">+/- w kolejności od tych, które chciałbym najbardziej</p>
+  <div class="gifts-grid" id="lista"></div>
+  <a href="index.html" class="back-link">← POWRÓT DO STRONY GŁÓWNEJ</a>
+</div>
 
-            <div class="gift-card">
-                <img src="Mac_Miller_K.I.D.S._cover_art.jpg" alt="kids album cover">
-                <div class="gift-title"Kids deluxe"</div>
-                <div class="gift-description">Autor: Mac Miller</div>
-             </div>
+<script>
+/* ==================================================================
+   DODAWANIE ALBUMU = skopiuj jedną linijkę, zmień dane, wklej
+   w odpowiednim miejscu (kolejność na liście = kolejność na stronie,
+   numerki #1, #2... doliczają się same).
 
-            <div class="gift-card">
-                <img src="LLA.jpg" alt="Live Love ASAP album cover">
-                <div class="gift-title">Live Love A$AP</div>
-                <div class="gift-description">Autor: A$AP Rocky</div>
-            </div>
-            <div class="gift-card">
-                <img src="bulldawg.webp" alt="BULLDAWG album cover">
-                <div class="gift-title">BULLDAWG</div>
-                <div class="gift-description">Autor: Kenny Mason</div>
-            </div>
-            <div class="gift-card">
-                <img src="ddc0e21aee890466270fcf3206f2ad0b.jpg" alt="Blond album cover">
-                <div class="gift-title">Blond</div>
-                <div class="gift-description">Autor: Frank Ocean</div>
-            </div>
-            
-            <div class="gift-card">
-                <img src="Graduation_(album).jpg" alt="Graduation album cover">
-                <div class="gift-title">Graduation</div>
-                <div class="gift-description">Autor: Kanye West</div>
-            </div>
-             <div class="gift-card">
-                <img src="81e-3lhg4rL.jpg" alt="Good kid,Maad city(deluxe) album cover">
-                <div class="gift-title">Good kid,Maad city(deluxe)</div>
-                <div class="gift-description">Autor: Kendrick Lamar</div>
-            </div>
+   tytul   - tytuł albumu
+   autor   - wykonawca
+   zdjecie - nazwa pliku okładki (wrzuconego do repozytorium)
+             albo adres z internetu (https://...)
+   sklepy  - OPCJONALNE przyciski. Możliwe klucze:
+             empik, amazon, oficjalny, discogs
+             np. sklepy:{ empik:"https://...", discogs:"https://..." }
+   kupione - true = karta szara z ✅ (możesz pominąć, jeśli nie kupione)
+   ================================================================== */
+const ALBUMY = [
+  { tytul:"K.I.D.S. (Deluxe)",              autor:"Mac Miller",             zdjecie:"Mac_Miller_K.I.D.S._cover_art.jpg" },
+  { tytul:"Live Love A$AP",                 autor:"A$AP Rocky",             zdjecie:"LLA.jpg" },
+  { tytul:"BULLDAWG",                       autor:"Kenny Mason",            zdjecie:"bulldawg.webp" },
+  { tytul:"Blond",                          autor:"Frank Ocean",            zdjecie:"ddc0e21aee890466270fcf3206f2ad0b.jpg" },
+  { tytul:"Graduation",                     autor:"Kanye West",             zdjecie:"Graduation_(album).jpg" },
+  { tytul:"good kid, m.A.A.d city (Deluxe)",autor:"Kendrick Lamar",         zdjecie:"81e-3lhg4rL.jpg" },
+  { tytul:"Melt My Eyez See Your Future",   autor:"Denzel Curry",           zdjecie:"MMESYF.png" },
+  { tytul:"Guitar",                         autor:"Mac DeMarco",            zdjecie:"guitar.webp" },
+  { tytul:"The Fall-Off",                   autor:"J. Cole",                zdjecie:"release-image.3f6a5d13.webp" },
+  { tytul:"Madvillainy",                    autor:"MF DOOM",                zdjecie:"Madvillainy_cover.png" },
+  { tytul:"Let God Sort Em Out",            autor:"Clipse",                 zdjecie:"clipse.jpg" },
+  { tytul:"Faces",                          autor:"Mac Miller",             zdjecie:"MacMillerFaces.jpg" },
+  { tytul:"The Forever Story",              autor:"JID",                    zdjecie:"JID.png" },
+  { tytul:"Don't Be Dumb",                  autor:"A$AP Rocky",             zdjecie:"DBD.png" },
+  { tytul:"Illmatic",                       autor:"Nas",                    zdjecie:"nas.jpg" },
+  { tytul:"From the Private Collection",    autor:"Saba, No ID",            zdjecie:"NOID.jpg" },
+  { tytul:"YE",                             autor:"Kanye West",             zdjecie:"Ye.jpg" },
+  { tytul:"Magic, Alive!",                  autor:"McKinley Dixon",         zdjecie:"MA.jpg" },
+  { tytul:"Balloonerism",                   autor:"Mac Miller",             zdjecie:"Mac_Miller_-_Balloonerism.png" },
+  { tytul:"Kids See Ghosts",                autor:"Kanye West, Kid Cudi",   zdjecie:"KSG.png" },
+];
 
-            
-            <div class="gift-card">
-                <img src="MMESYF.png" alt="Melt my eyez album cover">
-                <div class="gift-title">Melt My Eyez See Your Future</div>
-                <div class="gift-description">Autor: Denzel Curry</div>
-            </div>
-            
-            <div class="gift-card">
-                <img src="guitar.webp" alt="Guitar album cover">
-                <div class="gift-title">Guitar</div>
-                <div class="gift-description">Autor: Mac DeMarco</div>
-                
-            </div>
+/* ================= NIE MUSISZ TEGO RUSZAĆ ================= */
+const NAZWY_SKLEPOW = { empik:"Empik", amazon:"Amazon", oficjalny:"Sklep oficjalny", discogs:"Discogs" };
+const lista = document.getElementById("lista");
 
-            <div class="gift-card">
-                <img src="release-image.3f6a5d13.webp" alt="The Fall-off album cover">
-                <div class="gift-title">The Fall-off</div>
-                <div class="gift-description">Autor: J.Cole </div>
-            </div>
-            <div class="gift-card">
-                <img src="Madvillainy_cover.png" alt="Saba and No ID album cover">
-                <div class="gift-title">Madvillainy</div>
-                <div class="gift-description">Autor: MF Doom</div>
-            </div>
-    
-            <div class="gift-card">
-                <img src="clipse.jpg" alt="clipse album cover">
-                <div class="gift-title">Let God Sort Em Out</div>
-                <div class="gift-description">Autor: Clipse</div>
-            </div>
-            
-            <div class="gift-card">
-                <img src="MacMillerFaces.jpg" alt="Faces album cover">
-                <div class="gift-title">Faces</div>
-                <div class="gift-description">Autor: Mac Miller</div>
-            </div>
-            
-            <div class="gift-card">
-                <img src="JID.png" alt="The Forever Story album cover">
-                <div class="gift-title">The Forever Story</div>
-                <div class="gift-description">Autor: JID</div>
-            </div>
-            
-            <div class="gift-card">
-                <img src="DBD.png" alt="Don't be dumb album cover">
-                <div class="gift-title">Don't Be Dumb</div>
-                <div class="gift-description">Autor: A$AP Rocky</div>
-            </div>
-            <div class="gift-card">
-                <img src="nas.jpg" alt="Nas album cover">
-                <div class="gift-title">Illmatic</div>
-                <div class="gift-description">Autor: Nas</div>
-            </div>
-            <div class="gift-card">
-                <img src="NOID.jpg" alt="Saba and No ID album cover">
-                <div class="gift-title">From the Private Collection</div>
-                <div class="gift-description">Autor: Saba, No ID</div>
-            </div>
+ALBUMY.forEach((a, i) => {
+  const karta = document.createElement("div");
+  karta.className = "gift-card" + (a.kupione ? " kupione" : "");
 
-            <div class="gift-card">
-                <img src="Ye.jpg" alt="YE album cover">
-                <div class="gift-title">YE</div>
-                <div class="gift-description">Autor: Kanye West</div>
-            </div>
+  const numer = Object.assign(document.createElement("div"), { className:"numer", textContent:"#" + (i + 1) });
+  const img = Object.assign(document.createElement("img"), { src:a.zdjecie, alt:a.tytul + " – okładka", loading:"lazy" });
+  const tytul = Object.assign(document.createElement("div"), { className:"gift-title", textContent:a.tytul });
+  const autor = Object.assign(document.createElement("div"), { className:"gift-description", textContent:"Autor: " + a.autor });
+  karta.append(numer, img, tytul, autor);
 
-
-            <div class="gift-card">
-                <img src="MA.jpg" alt="Magic Alive album cover">
-                <div class="gift-title">Magic, Alive</div>
-                <div class="gift-description">Autor: McKinley Dixon</div>
-            </div>
-
-            <div class="gift-card">
-                <img src="Mac_Miller_-_Balloonerism.png" alt="Balloonerism album cover">
-                <div class="gift-title">Balloonerism</div>
-                <div class="gift-description">Autor: Mac Miller</div>
-            </div>
-            <div class="gift-card">
-                <img src="KSG.png" alt="Kids See Ghosts album cover">
-                <div class="gift-title">Kids See Ghosts</div>
-                <div class="gift-description">Autor: Kanye West, Kid Cudi</div>
-            </div>
-
-        </div>
-    </div>
+  if (a.sklepy) {
+    const box = Object.assign(document.createElement("div"), { className:"shop-buttons" });
+    Object.entries(a.sklepy).forEach(([klucz, url]) => {
+      box.append(Object.assign(document.createElement("a"), {
+        className:"shop-btn btn-" + klucz, href:url, target:"_blank", rel:"noopener",
+        textContent:NAZWY_SKLEPOW[klucz] || klucz
+      }));
+    });
+    karta.append(box);
+  }
+  lista.append(karta);
+});
+</script>
 </body>
 </html>
-
